@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(e,t,n){"use strict";n.r(t);var o=function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},r=[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("h1",[e._v("left todo for this project")]),e._v(" //Setup CI/CD - also deploy to web. to run cypress - ./node_modules/.bin/cypress open ")])}],s=n("2877"),l={},u=Object(s["a"])(l,o,r,!1,null,null,null);t["default"]=u.exports}}]);
+//# sourceMappingURL=about.71ca58c8.js.map
