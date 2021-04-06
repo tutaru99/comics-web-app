@@ -155,6 +155,7 @@ export default {
     searchResults: [],
     searchPage: 1,
     page: 1,
+    herokuAPI: "https://api-comics.herokuapp.com"
   }),
   mounted() {
     this.getSeries();
@@ -162,7 +163,7 @@ export default {
   methods: {
     async getSeries() {
       const page = this.page;
-      await axios.get(`http://localhost:4000/series?page=${page}`).then((res) => {
+      await axios.get(`${this.herokuAPI}/series?page=${page}`).then((res) => {
         this.scrollToTop();
         this.series = res.data.data;
       });
@@ -172,7 +173,7 @@ export default {
       const searchPage = this.searchPage;
       await axios
         .get(
-          `http://localhost:4000/searchseries?searchSeries=${searchSeries}&searchPage=${searchPage}`
+          `${this.herokuAPI}/searchseries?searchSeries=${searchSeries}&searchPage=${searchPage}`
         )
         .then((res) => {
           this.scrollToTop();

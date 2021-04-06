@@ -103,6 +103,7 @@ import axios from "axios";
 export default {
   data: () => ({
     comic: [],
+    herokuAPI: "https://api-comics.herokuapp.com"
   }),
   mounted() {
     this.getComic();
@@ -111,7 +112,7 @@ export default {
     async getComic() {
       const comicsId = this.$route.params.id;
       await axios
-        .get(`http://localhost:4000/comic?comicsId=${ comicsId }`)
+        .get(`${this.herokuAPI}/comic?comicsId=${ comicsId }`)
         .then((res) => {
           console.log(res);
           this.comic = res.data.data;

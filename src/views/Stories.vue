@@ -69,6 +69,7 @@ export default {
   data: () => ({
     stories: [],
     page: 1,
+    herokuAPI: "https://api-comics.herokuapp.com"
   }),
   mounted() {
     this.getStories();
@@ -77,7 +78,7 @@ export default {
     async getStories() {
       const page = this.page;
       await axios
-        .get(`http://localhost:4000/stories?page=${page}`)
+        .get(`${this.herokuAPI}/stories?page=${page}`)
         .then((res) => {
           this.scrollToTop();
           console.log(res);
