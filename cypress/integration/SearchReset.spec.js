@@ -36,15 +36,6 @@ describe('Search for Character', () => {
     })
 
 
-    it('Search Results fetched', () => {
-        cy.intercept({
-            method: 'GET',
-            url: `${api_url}/char`,
-         }).as('apiCheck')
-         cy.wait('@apiCheck').then((interception) => {
-            assert.isNotNull(interception.response.body, 'API call has data')
-         })
-    })
 
     it('Reset Search', () => {
 

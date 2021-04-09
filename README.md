@@ -1,5 +1,5 @@
 # dev-env-project Vue-FrontEnd
-to run cypress -  ./node_modules/.bin/cypress open
+to run cypress -  npm run cypress-test
 
 ## Project setup
 ```

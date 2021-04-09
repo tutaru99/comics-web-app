@@ -34,17 +34,17 @@ describe('Search Character', () => {
       cy.url().should('contain', 'http://localhost:8080/characters')
    })
 
-   it('Search Results fetched', () => {
+/*    it('Search Results fetched', () => {
 
       cy.intercept({
          method: 'GET',
          url: `${api_url}/char`,
       }).as('apiCheck')
-
+      
       cy.wait('@apiCheck').then((interception) => {
          assert.isNotNull(interception.response.body, 'API call has data')
       })
 
-   })
+   }) */
 
 })
