@@ -6,6 +6,7 @@
   "author": "",
   "scripts": {
     "start": "vue-cli-service serve",
+    "cypress-test": "./node_modules/.bin/cypress open",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"

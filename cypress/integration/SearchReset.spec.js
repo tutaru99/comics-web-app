@@ -1,5 +1,7 @@
 
 describe('Search for Character', () => {
+    const api_url = 'https://api-comics.herokuapp.com'
+
     it('Visit characters', () => {
 
         //visit url
@@ -11,7 +13,7 @@ describe('Search for Character', () => {
 
         cy.intercept({
             method: 'GET',
-            url: 'http://localhost:4000/characters',
+            url: `${api_url}/characters`,
         }).as('apiCheck')
 
         cy.visit('http://localhost:8080/characters')
@@ -37,7 +39,7 @@ describe('Search for Character', () => {
     it('Search Results fetched', () => {
         cy.intercept({
             method: 'GET',
-            url: 'http://localhost:4000/char',
+            url: `${api_url}/char`,
          }).as('apiCheck')
          cy.wait('@apiCheck').then((interception) => {
             assert.isNotNull(interception.response.body, 'API call has data')

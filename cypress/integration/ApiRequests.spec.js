@@ -1,9 +1,11 @@
 describe('API fetch Requests', () => {
+  const api_url = 'https://api-comics.herokuapp.com'
+
   it('GET Characters', () => {
 
     cy.intercept({
       method: 'GET',
-      url: 'http://localhost:4000/characters',
+      url: `${api_url}/characters`,
     }).as('apiCheck')
 
     cy.visit('http://localhost:8080/characters')
@@ -15,7 +17,7 @@ describe('API fetch Requests', () => {
 
     cy.intercept({
       method: 'GET',
-      url: 'http://localhost:4000/comics',
+      url: `${api_url}/comics`,
     }).as('apiCheck')
 
     cy.visit('http://localhost:8080/comics')
@@ -28,7 +30,7 @@ describe('API fetch Requests', () => {
 
     cy.intercept({
       method: 'GET',
-      url: 'http://localhost:4000/series',
+      url: `${api_url}/series`,
     }).as('apiCheck')
 
     cy.visit('http://localhost:8080/series')
@@ -41,7 +43,7 @@ describe('API fetch Requests', () => {
 
     cy.intercept({
       method: 'GET',
-      url: 'http://localhost:4000/stories',
+      url: `${api_url}/stories`,
     }).as('apiCheck')
 
     cy.visit('http://localhost:8080/stories')
@@ -55,7 +57,7 @@ describe('API fetch Requests', () => {
 
     cy.intercept({
       method: 'GET',
-      url: 'http://localhost:4000/characters',
+      url: `${api_url}/characters`,
     }).as('apiCheck')
 
     cy.visit('http://localhost:8080/characters')
@@ -76,7 +78,7 @@ describe('API fetch Requests', () => {
 
   cy.intercept({
      method: 'GET',
-     url: 'http://localhost:4000/characters',
+     url: `${api_url}/characters`,
   }).as('apiCheck')
   cy.wait('@apiCheck').then((interception) => {
      assert.isNotNull(interception.response.body, 'API call has data')
