@@ -35,7 +35,7 @@ describe('Search Character', () => {
    })
 
 
-   //Doenst work
+   //Doenst workk
 /*    it('Search Results fetched', () => {
 
       cy.intercept({
