@@ -1,7 +1,6 @@
-# dev-env-project
+# dev-env-project Vue-FrontEnd
 to run cypress -  ./node_modules/.bin/cypress open
 
-to run api - npm run away
 ## Project setup
 ```
 npm install
