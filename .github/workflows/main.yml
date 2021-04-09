@@ -28,12 +28,12 @@ jobs:
         run:
           npm install
           npm test
-            name: Run Cypress Tests
-            uses: cypress-io/github-action@v1
-            with:
-              start: npm start
-              wait-on: 'http://localhost:8080'
-              config: baseUrl=https://localhost:8080
+        name: Run Cypress Tests
+        uses: cypress-io/github-action@v1
+        with:
+          start: npm start
+          wait-on: 'http://localhost:8080'
+          config: baseUrl=https://localhost:8080
         env:
           privateKey: ${{ secrets.privateKey }}
           publicKey: ${{ secrets.publicKey }}

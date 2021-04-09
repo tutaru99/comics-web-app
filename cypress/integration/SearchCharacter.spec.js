@@ -34,6 +34,8 @@ describe('Search Character', () => {
       cy.url().should('contain', 'http://localhost:8080/characters')
    })
 
+
+   //Doenst work
 /*    it('Search Results fetched', () => {
 
       cy.intercept({
