@@ -34,6 +34,7 @@ jobs:
           start: npm start
           wait-on: 'http://localhost:8080'
           config: baseUrl=https://localhost:8080
+          allow_failure: true
         env:
           privateKey: ${{ secrets.privateKey }}
           publicKey: ${{ secrets.publicKey }}
