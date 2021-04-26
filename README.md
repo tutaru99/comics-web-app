@@ -1,6 +1,9 @@
 # dev-env-project Vue-FrontEnd
 to run cypress -  npm run cypress-test
-
+```
+To locally make it work get comics-api repository.
+Live ver. - https://comics-web-app.herokuapp.com
+```
 ## Project setup
 ```
 npm install
