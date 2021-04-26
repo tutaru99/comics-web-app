@@ -7,11 +7,11 @@ Live ver. - https://comics-web-app.herokuapp.com
 ```
 ```
     --Create .env file yourself. It should contain:
+    --Both Private and Public keys must be accquired at - https://developer.marvel.com/documentation/getting_started
+    --Heroku part is optional - it is being used for the continues integration through github actions (ci/cd)
 
 privateKey = 
 publicKey = 
-
-    --Both Private and Public keys must be accquired at - https://developer.marvel.com/documentation/getting_started
 
 HEROKU_API_KEY = 
 HEROKU_APP_NAME = 
