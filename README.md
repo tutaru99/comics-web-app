@@ -1,5 +1,7 @@
 # dev-env-project Vue-FrontEnd
-to run cypress -  npm run cypress-test
+```
+to run cypress Tests -  npm run cypress-test
+```
 ```
 To make it work locally get comics-api repository. Some tweaking is needed.
 Change herokuAPI data variable to your personal local/live uri.
