@@ -189,7 +189,7 @@ export default {
   },
 };
 </script>
-
+/* asdasdasda */
 <style scoped>
 .titletxt {
   color: red;
